@@ -1,9 +1,11 @@
 var express = require('express');
 var router = express.Router();
+var mongoose = require('mongoose');
+var Conversations = require('../models/conversation');
 
 /* GET conversations listing. */
 router.get('/', function(req, res, next) {
-  res.json({message: 'Let me die where I lie, \'neath the curse of my lover\'s eye.'});
+  res.json({Conversations});
 });
 
 router.post('/', function(req, res, next) {
