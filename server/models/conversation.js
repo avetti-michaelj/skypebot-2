@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 
 //define the schemas
 var Conversations = new Schema({
-    timestamp: Date,
+    timestamp: String,
     from: String,
     conversation: String,
     recipient: String

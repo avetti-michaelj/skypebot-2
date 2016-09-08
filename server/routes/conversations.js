@@ -19,7 +19,7 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
   var conversation = new Conversation(req.body);
   Conversation.create({
-    timestamp: Date,
+    timestamp: String,
     from: String,
     conversation: String,
     recipient: String
