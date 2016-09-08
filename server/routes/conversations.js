@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var Conversations = require('../models/conversation');
+var Conversation = require('../models/conversation');
 
 /* GET conversations listing. */
 router.get('/', function(req, res, next) {
-  Conversations.find(function (err, conversations) {
+  Conversation.find(function (err, conversations) {
         if (err) {
             console.log(err);
             res.end(err);
@@ -17,7 +17,19 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-  res.json({message: req.body});
-})
+  var conversation = new Conversation(req.body);
+  Conversation.create({
+    timestamp: Date,
+    from: String,
+    conversation: String,
+    recipient: String
+  },
+  function (err, Conversation) {
+    if (err) {
+      console.log(err);
+      res.end(err);
+    }
+  });
+});
 
 module.exports = router;
