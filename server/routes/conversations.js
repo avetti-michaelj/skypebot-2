@@ -22,7 +22,7 @@ router.post('/', function(req, res, next) {
   Conversation.create({
     timestamp: String,
     from: String,
-    conversation: String,
+    conversation: req.body,
     recipient: String
   },
   function (err, Conversation) {
