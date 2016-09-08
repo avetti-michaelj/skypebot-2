@@ -20,10 +20,10 @@ router.post('/', function(req, res, next) {
   var conversation = new Conversation(req.body);
   res.json(req.body);
   Conversation.create({
-    timestamp: String,
-    from: String,
-    conversation: req.body,
-    recipient: String
+    From: req.body.from,
+    To: req.body.to,
+    ConversationID: req.body.id,
+    Time: req.body.time
   },
   function (err, Conversation) {
     if (err) {

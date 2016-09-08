@@ -5,10 +5,10 @@ var Schema = mongoose.Schema;
 
 //define the schemas
 var Conversations = new Schema({
-    timestamp: String,
-    from: String,
-    conversation: String,
-    recipient: String
+    From: String,
+    To: String,
+    ConversationID: String,
+    Time: String
 }, {
 	collection: 'conversations'
 });
