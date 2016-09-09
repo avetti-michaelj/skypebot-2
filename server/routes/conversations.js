@@ -18,12 +18,12 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
   var conversation = new Conversation(req.body);
-  res.json(req.body);
   Conversation.create({
-    From: req.body.from,
-    To: req.body.to,
-    ConversationID: req.body.id,
-    Time: req.body.time
+    timestamp: String,
+    from: String,
+    conversation: String,
+    recipient: String,
+    test: req.body
   },
   function (err, Conversation) {
     if (err) {
