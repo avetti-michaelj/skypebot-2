@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var Conversation = require('../models/conversation');
 
 /* GET conversations listing. */
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res, next) {/*
   Conversation.find(function (err, conversations) {
         if (err) {
             console.log(err);
@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
         else {
           res.json({conversations});
         }
-  });
+  });*/
 });
 
 router.post('/', function(req, res, next) {
